@@ -11,10 +11,10 @@ router.get("/", (req: Request, res: Response) => {
     })
 })
 
-router.get("/:id", (req: Request, res: Response) => {
+router.get("/:id", (req, res: Response) => {
     const userId = req.params.id;
     return res.status(200).json({
-        id: userId,
+        id: userId
         name: "Sample User",
     })
 })
