@@ -4,17 +4,15 @@ const router = express.Router();
 
 router.get("/", (req: Request, res: Response) => {
     return res.status(200).json({
-        users: [
-            { id: 1, name: "Alice" },
-            { id: 2, name: "Bob" },
+        us: 2, name: "Bob" },
         ],
     })
 })
 
-router.get("/:id", (req, res: Response) => {
+router.get("/:id", (req: Request, res: Response) => {
     const userId = req.params.id;
     return res.status(200).json({
-        id: userId
+        id: userId,
         name: "Sample User",
     })
 })
