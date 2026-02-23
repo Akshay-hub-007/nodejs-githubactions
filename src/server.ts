@@ -1,6 +1,11 @@
+import "dotenv/config";
+import dns from "dns";
 import express from "express";
 import practiceRoutes from "./practice.js"
 import usersRoutes from "./users.js"
+
+dns.setDefaultResultOrder("ipv4first");
+
 const app = express()
 
 app.use(express.json())
